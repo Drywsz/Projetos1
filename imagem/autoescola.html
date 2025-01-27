@@ -9,15 +9,17 @@
 </head>
 <body>
 
-  <div class="container-fluid bg-dark" >
+  <div class="container-fluid bg-dark">
     <div class="row">
-      <div class="col-sm">
-        <img class="card-img-top" src="/imagem/1000342663_bb7df19ce6084705b3399abdad04312a-22_01_2025_-13_47_21.png" alt="Imagem de capa do card" large="" height="100">
+      <div class="col-sm d-flex justify-content-start">
+        <img src="/imagem/1000342663_bb7df19ce6084705b3399abdad04312a-22_01_2025_-13_47_21.png" alt="Descrição da imagem" height="100" width="100">
       </div>
-       <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-  </form>
+      <div class="col-sm d-flex justify-content-center">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 300px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </div>
       <div class="col-sm" style="display: flex; justify-content: flex-end;">
         <nav class="navbar navbar-dark bg-dark">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
@@ -25,17 +27,26 @@
           </button>
         </nav>
       </div>
-      </div>
-        
-        </div>
-      </div>
     </div>
   </div>
 
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+
+    </div>
+  </div>
+
+  <div>
+    <img src="/imagem/imagem2.jpg" alt="Opa" class="img-fluid w-100 h-50">
+  </div>
       
-    
 
-
+  <!-- Scripts necessários -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
