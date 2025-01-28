@@ -1,0 +1,8 @@
+.container-fluid .card {
+    margin: 0px;
+}
+.container-fluid .card img[src$="as.png"] {
+    width: 10px;
+    height: 10px;
+}
+
