@@ -3,4 +3,37 @@
     margin: 10px; /* Ajuste o valor conforme necessário */
 }
 
+body {
+    background-color: #f8f9fa;
+}
+.jumbotron {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+}
+.jumbotron h1 {
+    font-size: 2.5rem;
+}
+.content {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
 
+/* Alinhamento dos campos de texto e botão */
+header .form-inline {
+    display: flex;
+    align-items: center;
+}
+
+header .form-inline .form-control {
+    margin-right: 10px;
+}
+
+.large-paragraph {
+    font-size: 100000em;
+    line-height: 1.6;
+}
