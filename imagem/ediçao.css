@@ -1,8 +1,6 @@
-.container-fluid .card {
-    margin: 0px;
+.card {
+    padding: 20px;
+    margin: 10px; /* Ajuste o valor conforme necessário */
 }
-.container-fluid .card img[src$="as.png"] {
-    width: 10px;
-    height: 10px;
-}
+
 
