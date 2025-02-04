@@ -20,13 +20,13 @@
                 </div>
                 <div class="col-md-4 text-center my-2 my-md-0">
                     <nav>
-                        <a href="#" class="btn btn-outline-secondary mx-1">Home</a>
+                        <a href="/imagem/autoescola.html" class="btn btn-outline-secondary mx-1">Home</a>
                         <a href="#" class="btn btn-outline-secondary mx-1">Sobre</a>
                         <a href="#" class="btn btn-outline-secondary mx-1">Contato</a>
-                        <a href="#" class="btn btn-outline-secondary mx-1">Matricule-se</a>
+                        <a href="Login/login.html" class="btn btn-outline-secondary mx-1">Matricule-se</a>
                     </nav>
                 </div>
-                <div class="col-md-4 text-center text-md-right">
+                <div class="col-md-4 text-center text-md-right bg-dark">
                     <form class="form-inline justify-content-center justify-content-md-end">
                         <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                         <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
@@ -69,7 +69,7 @@
                     <h1 style="color: yellow; font-family: 'Arial', sans-serif;">Tipos de carteira</h1>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center olha">
                 <!-- Card 1 -->
                 <div class="card bg-dark text-white m-2" style="width: 18rem;">
                     <img class="card-img-top"
@@ -153,10 +153,10 @@
 
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <h3>AutoEscola Excelência</h3>
+            <h3>AutoEscola Rumo Certo</h3>
             <p>&copy; 2025 Auto Escola Rumo Certo. Todos os direitos reservados.</p>
             <div class="social-icons">
-                <a href="#" target="_blank"><img
+                <a href="Login/login.html" target="_blank"><img
                         src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
                         alt="Facebook"></a>
                 <a href="#" target="_blank"><img
@@ -168,9 +168,21 @@
         </div>
     </footer>
 
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.social-icons a').forEach(icon => {
+            icon.addEventListener('click', function () {
+                this.style.transform = 'scale(1.2) rotate(15deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                }, 300);
+            });
+        });
+    </script>
 </body>
 
 </html>
