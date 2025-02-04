@@ -1,3 +1,4 @@
+/* CSS Geral */
 body {
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
@@ -28,29 +29,7 @@ header .form-inline .form-control {
     color: white;
 }
 
-.card {
-    margin: 10px;
-    border: none;
-    box-shadow: 0 0.5rem 1rem rgba(252, 252, 252, 0.15);
-}
-
-footer a {
-    color: #d1d40b;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 0 10px;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-}
+/* Cards */
 .card-container {
     display: flex;
     justify-content: center;
@@ -118,12 +97,54 @@ footer a:hover {
     background-color: #3100e0;
 }
 
+/* Rodapé */
+footer {
+    background-color: #8d9094;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .social-icons a {
     display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    background-color: rgba(173, 175, 24, 0.1);
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
     transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Aplicando a sombra para todos os ícones */
 }
 
-.social-icons a:active {
-    transform: scale(1.2) rotate(15deg);
+.social-icons a:hover img {
+    transform: rotate(15deg) scale(1.1);
 }
 
+footer a {
+    color: #d1d40b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
