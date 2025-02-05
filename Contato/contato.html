@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="opa.css">
+    <link rel="stylesheet" href="/Contato/oi.css">
+    <title>Contato - AutoEscola</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-left">
+                    <img src="esmais.png" alt="Logo da AutoEscola" class="img-fluid" style="height: 100px; margin-left: -10px;">
+                </div>
+                <div class="col-md-4 text-center my-2 my-md-0">
+                    <nav>
+                        <a href="/imagem/autoescola.html" class="btn btn-outline-secondary mx-1">Início</a>
+                        <a href="/Sobre/Sobre.html" class="btn btn-outline-secondary mx-1">Sobre</a>
+                        <a href="/imagem/Login/login.html" class="btn btn-outline-secondary mx-1">Matricule-se</a>
+                    </nav>
+                </div>
+                <div class="col-md-4 text-center text-md-right bg-dark">
+                    <form class="form-inline justify-content-center justify-content-md-end">
+                        <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                        <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Entre em Contato Conosco!</h1>
+                <p class="lead">Tem dúvidas ou precisa de mais informações? Preencha o formulário abaixo e entraremos em contato.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <form action="contato_backend.php" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h3>AutoEscola Rumo Certo</h3>
+            <p>&copy; 2025 Auto Escola Rumo Certo. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"></a>
+                <a href="#" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                        alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                        alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
