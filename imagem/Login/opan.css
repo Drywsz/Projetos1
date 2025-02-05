@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
     height: 100vh;
-    margin: -20px 0 50px;
+    margin: 0;
 }
 
 h1 {
@@ -43,16 +43,18 @@ a {
 
 /* Ajustando os botões para ficarem redondos */
 button {
-    border-radius: 10px;  /* Garantindo que o botão fique redondo */
+    border-radius: 10px;
     border: 1px solid #615004;
     background-color: #bb9e1f;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
-    padding: 12px 45px;  /* Ajuste do padding para maior tamanho */
+    padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
+    margin: 10px 0;
+    width: auto;
 }
 
 button:active {
@@ -84,10 +86,10 @@ form {
 input {
     background-color: #eee;
     border: none;
-    padding: 12px 15px;  /* Aumentando o padding para mais espaço nos campos */
-    margin: 120px 120;
+    padding: 12px 15px;
+    margin: 20px 0;
     width: 100%;
-    border-radius: 100px;  /* Garantindo que os campos de entrada também tenham bordas arredondadas */
+    border-radius: 100px;
 }
 
 /* Container principal */
@@ -101,6 +103,7 @@ input {
     max-width: 100%;
     min-height: 480px;
     color: #a3a10f;
+    margin-bottom: 70px;
 }
 
 /* Estilos para a animação de transição */
@@ -136,14 +139,12 @@ input {
 }
 
 @keyframes show {
-    0%,
-    49.99% {
+    0%, 49.99% {
         opacity: 0;
         z-index: 1;
     }
 
-    50%,
-    100% {
+    50%, 100% {
         opacity: 1;
         z-index: 5;
     }
@@ -285,4 +286,92 @@ footer a {
 
 footer a:hover {
     color: #fff;
+}
+
+header .form-inline .form-control {
+    margin-right: 10px;
+    color: #000;
+    background-color: #fff;
+    border-color: #d1d40b;
+}
+
+.btn-outline-secondary:active,
+.btn-outline-secondary:focus {
+    background-color: #d1d40b;
+    color: white !important;
+}
+
+.btn-primary:active {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajustes no header */
+    header .container-fluid {
+        padding: 0 15px;
+    }
+    
+    .form-container {
+        padding: 0 15px;
+    }
+
+    /* Ajuste no tamanho do container principal */
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    /* Ajuste nos formulários */
+    .form-container form {
+        width: 100%;
+    }
+
+    /* Ajuste nos botões */
+    button {
+        width: 100%; /* Botões ocupam toda a largura da tela */
+        font-size: 14px; /* Aumenta o tamanho da fonte */
+        padding: 12px 0; /* Ajusta o padding para um botão mais confortável em telas menores */
+    }
+
+    /* Ajuste no campo de entrada */
+    input {
+        padding: 15px; /* Mais espaço dentro dos campos */
+        font-size: 14px; /* Aumenta o tamanho da fonte */
+    }
+
+    /* Ajustes no layout de ícones sociais */
+    .social-container {
+        justify-content: center;
+    }
+
+    .social-container a {
+        margin: 5px;
+        width: 35px; /* Reduz o tamanho dos ícones para ajustar em telas pequenas */
+        height: 35px;
+    }
+
+    /* Ajustes na imagem do header */
+    header img {
+        height: 60px; /* Reduz o tamanho da imagem para caber melhor */
+    }
+
+    /* Ajuste na sobreposição */
+    .overlay {
+        background-size: 100% 100%;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Ajustes nos elementos do footer */
+    footer {
+        font-size: 12px;
+    }
 }
