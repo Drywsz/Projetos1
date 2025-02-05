@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricula - AutoEscola Rumo Certo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="opaaan.css">
+    <link rel="stylesheet" href="cssia.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container-fluid bg-dark text-white">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-left">
+                    <img src="/visitar/logoooo.png" alt="Descrição da imagem" class="img-fluid" style="height: 100px; margin-left: -10px;">
+                </div>
+                <div class="col-md-4 text-center my-2 my-md-0">
+                    <nav>
+                        <a href="/imagem/autoescola.html" class="btn btn-outline-secondary mx-1">Início</a>
+                        <a href="/Sobre/Sobre.html" class="btn btn-outline-secondary mx-1">Sobre</a>
+                        <a href="/Contato/contato.html" class="btn btn-outline-secondary mx-1">Contato</a>
+                        <a href="/imagem/Login/login.html" class="btn btn-outline-secondary mx-1">Matricule-se</a>
+                    </nav>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <form class="d-flex flex-nowrap justify-content-center justify-content-md-end">
+                        <div class="row gx-2 align-items-center">
+                            <div class="col-auto">
+                                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mt-5 p-5 bg-white text-dark rounded">
+        <h2 class="text-center mb-4">Matricule-se na AutoEscola Rumo Certo</h2>
+
+        <!-- Seleção do Curso -->
+        <div class="row mb-4">
+            <div class="col-md-12 text-center">
+                <h4 class="mb-4">Escolha o Curso</h4>
+                <select class="form-select" id="course-select">
+                    <option value="" selected disabled>Selecione o curso</option>
+                    <option value="categoriaA">Categoria A - Motocicletas</option>
+                    <option value="categoriaB">Categoria B - Carros</option>
+                    <option value="categoriaC">Categoria C - Caminhões</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Categoria A -->
+        <div class="row" id="categoriaA" style="display: none;">
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 bg-light text-dark border-0 shadow">
+                    <h4 class="text-center">Categoria A</h4>
+                    <img src="https://th.bing.com/th/id/OIP.Z-f22gszCfpQqvyJMoiF8wHaEn?w=265&h=180&c=7&r=0&o=5&pid=1.7" alt="Categoria A" class="img-fluid mb-3">
+                    <p class="text-center">R$ 500,00</p>
+                    <p>Habilita a condução de motocicletas e veículos similares de duas ou três rodas.</p>
+                    <button class="btn btn-primary btn-block" onclick="selectCourse('Categoria A', 500)">Matricule-se</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria B -->
+        <div class="row" id="categoriaB" style="display: none;">
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 bg-light text-dark border-0 shadow">
+                    <h4 class="text-center">Categoria B</h4>
+                    <img src="https://th.bing.com/th/id/OIP.Rtii9i7bCBQMF3Wze5ro-wHaFI?w=258&h=180&c=7&r=0&o=5&pid=1.7" alt="Categoria B" class="img-fluid mb-3">
+                    <p class="text-center">R$ 800,00</p>
+                    <p>Permite dirigir veículos de até 3.500 kg e até 8 passageiros (além do motorista), como carros e utilitários.</p>
+                    <button class="btn btn-primary btn-block" onclick="selectCourse('Categoria B', 800)">Matricule-se</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoria C -->
+        <div class="row" id="categoriaC" style="display: none;">
+            <div class="col-md-4 mb-4">
+                <div class="card p-3 bg-light text-dark border-0 shadow">
+                    <h4 class="text-center">Categoria C</h4>
+                    <img src="https://th.bing.com/th/id/OIP.GHOJhoqPivukgiwVLan0DgHaD3?w=312&h=180&c=7&r=0&o=5&pid=1.7" alt="Categoria C" class="img-fluid mb-3">
+                    <p class="text-center">R$ 1.200,00</p>
+                    <p>Autoriza a condução de veículos acima de 3.500 kg, como caminhões, mas sem transporte de passageiros.</p>
+                    <button class="btn btn-primary btn-block" onclick="selectCourse('Categoria C', 1200)">Matricule-se</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Pagamento -->
+        <div class="payment-form mt-5" id="payment-form" style="display: none;">
+            <h3>Escolha a forma de pagamento</h3>
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="payment-method" class="form-label">Forma de Pagamento</label>
+                    <select class="form-select" id="payment-method" onchange="togglePaymentFields()" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="pix">Pix</option>
+                        <option value="boleto">Boleto Bancário</option>
+                    </select>
+                </div>
+
+                <!-- Campos Cartão de Crédito -->
+                <div id="credit-card-fields" style="display:none;">
+                    <div class="mb-3">
+                        <label for="card-number" class="form-label">Número do Cartão</label>
+                        <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9123 4567">
+                    </div>
+                    <div class="mb-3">
+                        <label for="due-date" class="form-label">Data de Vencimento</label>
+                        <input type="date" class="form-control" id="due-date">
+                    </div>
+                </div>
+
+                <!-- Campos Pix -->
+                <div id="pix-fields" style="display:none;">
+                    <p class="text-center">Faça o pagamento via QR Code</p>
+                    <div id="pix-qr-code" class="text-center mb-3">
+                        <!-- QR Code gerado dinamicamente -->
+                    </div>
+                </div>
+
+                <!-- Campos Boleto -->
+                <div id="boleto-fields" style="display:none;">
+                    <p class="text-center">Clique no link abaixo para gerar seu boleto:</p>
+                    <a href="https://www.exemplo.com/gerar-boleto" id="boleto-link" class="btn btn-link">Gerar Boleto</a>
+                </div>
+
+                <div class="mb-3">
+                    <label for="total-price" class="form-label">Valor Total</label>
+                    <input type="text" class="form-control" id="total-price" value="R$ 800,00" readonly>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Confirmar Matrícula</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h3>AutoEscola Rumo Certo</h3>
+            <p>&copy; 2025 Auto Escola Rumo Certo. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="Login/login.html" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"></a>
+                <a href="#" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                        alt="Instagram"></a>
+                <a href="#" target="_blank"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                        alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Exibe o curso selecionado
+        document.getElementById("course-select").addEventListener("change", function() {
+            var selectedCourse = this.value;
+            var courses = ["categoriaA", "categoriaB", "categoriaC"];
+            courses.forEach(function(course) {
+                document.getElementById(course).style.display = "none";
+            });
+
+            if (selectedCourse) {
+                document.getElementById(selectedCourse).style.display = "block";
+            }
+
+            document.getElementById("payment-form").style.display = "none"; // Esconde o pagamento inicialmente
+        });
+
+        // Seleciona o curso e exibe o formulário de pagamento
+        function selectCourse(course, price) {
+            document.getElementById("total-price").value = "R$ " + price.toFixed(2);
+            document.getElementById("payment-form").style.display = "block";
+        }
+
+        function togglePaymentFields() {
+            var paymentMethod = document.getElementById("payment-method").value;
+            document.getElementById("credit-card-fields").style.display = "none";
+            document.getElementById("pix-fields").style.display = "none";
+            document.getElementById("boleto-fields").style.display = "none";
+
+            if (paymentMethod == "cartao") {
+                document.getElementById("credit-card-fields").style.display = "block";
+            } else if (paymentMethod == "pix") {
+                document.getElementById("pix-fields").style.display = "block";
+                generatePixQRCode();
+            } else if (paymentMethod == "boleto") {
+                document.getElementById("boleto-fields").style.display = "block";
+            }
+        }
+
+        function generatePixQRCode() {
+            var qrCodeContainer = document.getElementById("pix-qr-code");
+            QRCode.toCanvas(qrCodeContainer, "https://www.exemplo.com/pagamento-pix", function (error) {
+                if (error) console.error(error);
+            });
+        }
+    </script>
+</body>
+
+</html>

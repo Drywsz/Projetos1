@@ -11,6 +11,7 @@ body {
     font-family: "Montserrat", sans-serif;
     height: 100vh;
     margin: 0;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
 }
 
 h1 {
@@ -139,12 +140,14 @@ input {
 }
 
 @keyframes show {
-    0%, 49.99% {
+    0%,
+    49.99% {
         opacity: 0;
         z-index: 1;
     }
 
-    50%, 100% {
+    50%,
+    100% {
         opacity: 1;
         z-index: 5;
     }
@@ -233,19 +236,10 @@ input {
     width: 40px;
 }
 
-/* Estilos do footer */
 footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-    color: #d1d40b;
-    text-decoration: none;
+    background-color: #8d9094;
+    padding: 2rem 0;
+    margin-top: auto;  /* Isso garante que o rodapé vá para o final */
 }
 
 footer .container {
@@ -269,7 +263,7 @@ footer .container {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    background-color: rgba(209, 212, 11, 0.1);
+    background-color: rgba(173, 175, 24, 0.1);
 }
 
 .social-icons img {
@@ -277,6 +271,11 @@ footer .container {
     height: 35px;
     vertical-align: middle;
     transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Aplicando a sombra para todos os ícones */
+}
+
+.social-icons a:hover img {
+    transform: rotate(15deg) scale(1.1);
 }
 
 footer a {
@@ -308,11 +307,12 @@ header .form-inline .form-control {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
     /* Ajustes no header */
     header .container-fluid {
         padding: 0 15px;
     }
-    
+
     .form-container {
         padding: 0 15px;
     }
@@ -331,15 +331,15 @@ header .form-inline .form-control {
 
     /* Ajuste nos botões */
     button {
-        width: 100%; /* Botões ocupam toda a largura da tela */
-        font-size: 14px; /* Aumenta o tamanho da fonte */
-        padding: 12px 0; /* Ajusta o padding para um botão mais confortável em telas menores */
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 0;
     }
 
     /* Ajuste no campo de entrada */
     input {
-        padding: 15px; /* Mais espaço dentro dos campos */
-        font-size: 14px; /* Aumenta o tamanho da fonte */
+        padding: 15px;
+        font-size: 14px;
     }
 
     /* Ajustes no layout de ícones sociais */
@@ -349,13 +349,13 @@ header .form-inline .form-control {
 
     .social-container a {
         margin: 5px;
-        width: 35px; /* Reduz o tamanho dos ícones para ajustar em telas pequenas */
+        width: 35px;
         height: 35px;
     }
 
     /* Ajustes na imagem do header */
     header img {
-        height: 60px; /* Reduz o tamanho da imagem para caber melhor */
+        height: 60px;
     }
 
     /* Ajuste na sobreposição */
@@ -364,14 +364,32 @@ header .form-inline .form-control {
     }
 
     .social-icons {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
     }
 
     /* Ajustes nos elementos do footer */
     footer {
         font-size: 12px;
     }
+}
+
+header .form-inline .form-control {
+    margin-right: 10px;
+    color: #000;
+    background-color: #fff;
+    border-color: #d1d40b;
+}
+
+.btn-outline-secondary:active,
+.btn-outline-secondary:focus {
+    background-color: #d1d40b;
+    color: white !important;
+}
+
+.btn-primary:active {
+    background-color: #0056b3;
+    color: white;
 }

@@ -1,0 +1,283 @@
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Garante que a página ocupe pelo menos a altura total da tela */
+    overflow-x: hidden; /* Corrige o problema de scroll horizontal */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #212529;
+    padding: 15px 0;
+    color: white;
+}
+
+header img {
+    max-height: 100px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Estilo principal da página */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Garante que o conteúdo principal ocupe o espaço restante da tela */
+}
+
+/* Título principal */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Seção de Seleção de Curso */
+#course-select {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+#course-select option {
+    font-size: 1.1rem;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para o formulário de pagamento */
+.payment-form {
+    margin-top: 50px;
+}
+
+.payment-form h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-form .form-select,
+.payment-form .form-control {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.payment-form .form-select {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.payment-form .mb-3 {
+    font-size: 1.1rem;
+}
+
+.payment-form .btn {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #28a745;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.payment-form .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Estilo de QR Code para Pix */
+#pix-qr-code canvas {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: #6c757d;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    background-color: rgba(173, 175, 24, 0.1);
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Aplicando a sombra para todos os ícones */
+}
+
+.social-icons a:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+footer a {
+    color: #d1d40b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .col-md-4 {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .payment-form {
+        padding: 20px;
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+header .form-inline .form-control {
+    margin-right: 10px;
+    color: #000;
+    background-color: #fff;
+    border-color: #d1d40b;
+}
+
+.btn-outline-secondary:active,
+.btn-outline-secondary:focus {
+    background-color: #d1d40b;
+    color: white !important;
+}
+
+.btn-primary:active {
+    background-color: #0056b3;
+    color: white;
+}
